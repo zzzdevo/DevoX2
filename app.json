@@ -1,17 +1,16 @@
 {
-    "name": "Yukki Music Bot",
-    "description": "Telegram Group Calls streaming bot with some useful features, written in Python with Pyrogram and Py-Tgcalls. Supporting platforms like Youtube, Spotify, Resso, AppleMusic, Soundcloud and M3u8 Links.",
-    "logo": "https://telegra.ph/file/c0e014ff34f34d1056627.png",
+    "name": "ᴀɴᴏɴ ダ ᴍᴜsɪᴄ",
+    "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
+    "logo": "https://te.legra.ph/file/b8a0c1a00db3e57522b53.jpg",
     "keywords": [
     "python3",
     "telegram",
     "bot",
-    "Yukki",
-    "YukkiMusicBot",
+    "AnonX",
+    "MusicBot",
     "telegram-bot",
     "pyrogram"
     ],
-    "stack": "container",
     "env": {
       "API_ID": {
         "description": "Get this value from https://my.telegram.org",
@@ -23,54 +22,59 @@
         "value": "",
         "required": true
       },
-      "AUTO_LEAVING_ASSISTANT": {
-        "description": "If you want your assistant to leave all chats automatically after some time.",
-        "value": "True",
-        "required": false
-      },
       "BOT_TOKEN": {
         "description": "A Bot's token from Botfather",
         "value": "",
         "required": true
       },
       "MONGO_DB_URI": {
-        "description": "Get a mongodb url from https://cloud.mongodb.com . You can leave it blank if you want , bot will use Yukki's database for you.",
-        "value": "",
-        "required": true
-      },
-      "MUSIC_BOT_NAME": {
-        "description": "A name for your Music Bot. Please don't use ascii characters",
-        "value": "",
+        "description": "Get a mongodb url from https://cloud.mongodb.com.",
+        "value": "mongodb+srv://jotaroiq:vG31RO17BSm0Fh6v@cluster0.r7bmz9q.mongodb.net/?retryWrites=true&w=majority",
         "required": true
       },
       "OWNER_ID": {
-        "description": "The user id(s) of user(s) whom you would like to add as a OWNER. Multiple values shall be seperated with a space.",
-        "value": "",
+        "description": "The user id of user whom you would like to add as OWNER.",
+        "value": "833360381",
         "required": true
       },
+      "SUPPORT_CHANNEL": {
+        "description": "The user id of user whom you would like to add as OWNER.",
+        "value": "https://t.me/MGIMT",
+        "required": true
+      },
+      "SUPPORT_GROUP": {
+        "description": "The user id of user whom you would like to add as OWNER.",
+        "value": "https://t.me/IQSUPP",
+        "required": true
+      },
+      "AUTO_LEAVING_ASSISTANT": {
+        "description": "If you want your assistant to leave all chats automatically after some time.",
+        "value": "True",
+        "required": false
+      },
       "STRING_SESSION": {
-        "description": "A Pyrogram String Session. One Assistant is Compulsory.",
-        "value": "",
+        "description": "A Pyrogram v2 String Session from @StringFatherBot on Telegram.",
+        "value": "AgCSxocAso40nBYJHAdbsery54yxlkqGN4ihJjAQETPxG8dHaSxGnrezH0haJLyod3pncLJIcFqRdPYCaMp9g8zmKs7ODQ1ZfMqkC0gZACR1Y34fmfBHGYBm2Qlb8PHdo2LeUGceQEA0KLN-brTRxlVP17PrUOCJTwfQESWXTafC7G7wWm3oA2Ehqx-rveL6J_KAKW_0FkLt82qortyLrBt5V3O3ruLsNkIgKE-Pdrpupu0Ne8thdykzdQqyeYIgAutk08EoEK9CCwbXmnxgJ3lh0hgKlvGfCCGUAx05TUUN6wptUXOy_M4j0JPHP0keaNaVG18ZN4PNorD1GRs3qPhXNzyb9wAAAAFu7FdkAA",
         "required": true
       },
       "HEROKU_API_KEY": {
         "description": "Your Heroku account's API key",
-        "value": "",
+        "value": "f70a420a-2df9-4e2d-9c81-c52f28f654a7",
         "required": false
       },
       "HEROKU_APP_NAME": {
-        "description": "Your heroku app/bot's name",
+        "description": "Your heroku app name",
         "value": "",
         "required": false
       },
       "LOG_GROUP_ID": {
         "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Use only Group. Please don't use Channel ID.",
-        "value": "",
+        "value": "-1001801583479",
         "required": true
       },
       "UPSTREAM_REPO": {
         "description": "If you dont know this, Leave as it is",
-        "value": "https://github.com/TeamYukki/YukkiMusicBot",
+        "value": "https://github.com/zzzdevo/DevoX2",
         "required": true
       },
       "UPSTREAM_BRANCH": {
@@ -90,10 +94,5 @@
               "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
           }
       ],
-      "formation": {
-          "worker": {
-              "quantity": 1,
-              "size": "free"
-          }
-      }
+      "stack": "container"
   }
