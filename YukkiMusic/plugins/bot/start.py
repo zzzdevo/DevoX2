@@ -48,7 +48,8 @@ async def start_comm(client, message: Message, _):
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
             keyboard = help_pannel(_)
-            return await message.reply_text(
+            return await message.reply_photo(
+              photo=config.START_IMG_URL,
                 _["help_1"], reply_markup=keyboard
             )
         if name[0:4] == "song":
@@ -230,7 +231,8 @@ async def start_comm(client, message: Message, _):
 @LanguageStart
 async def testbot(client, message: Message, _):
     out = start_pannel(_)
-    return await message.reply_text(
+    return await message.reply_photo(
+      photo=config.START_IMG_URL,
         _["start_1"].format(
             message.chat.title, config.MUSIC_BOT_NAME
         ),
