@@ -384,7 +384,7 @@ async def playmode_ans(client, CallbackQuery, _):
             Playtype = False
         else:
             await set_playtype(
-                CallbackQuery.message.chat.id, "Admin"
+                CallbackQuery.message.chat.id, "Everyone"
             )
             Playtype = True
         playmode = await get_playmode(CallbackQuery.message.chat.id)
