@@ -71,7 +71,7 @@ async def helper_private(
         keyboard = help_pannel(_)
         await update.reply_photo(
             photo=config.START_IMG_URL,
-            _["help_1"], reply_markup=keyboard)
+            caption=_["help_1"], reply_markup=keyboard)
 
 
 @app.on_message(
