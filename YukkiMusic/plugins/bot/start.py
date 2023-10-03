@@ -1,11 +1,4 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
+
 
 import asyncio
 
@@ -148,18 +141,17 @@ async def start_comm(client, message: Message, _):
                 link = result["link"]
                 published = result["publishedTime"]
             searched_text = f"""
-🔍__**Video Track Information**__
+•⎆┊**[ᯓ زانیاریەکانی تڕاك🧑🏻‍💻🖤](t.me/MGIMT)** 
 
-❇️**Title:** {title}
+👾 **ناونیشان :** {title}
 
-⏳**Duration:** {duration} Mins
-👀**Views:** `{views}`
-⏰**Published Time:** {published}
-🎥**Channel Name:** {channel}
-📎**Channel Link:** [Visit From Here]({channellink})
-🔗**Video Link:** [Link]({link})
+⏳ **ماوە : {duration} خولەك **
+👀 **بینینەکان :** `{views}` **
+🪐 **بڵاوکراوەتەوە لە : {published} **
+🔗 **لینك : [لە یوتوب سەیری بکەن] **({link}) **
+🎥 **که‌ناڵ :** [{channel}]({channellink})**
 
-⚡️ __Searched Powered By {config.MUSIC_BOT_NAME}__"""
+**🕷️ گەڕانی بەهێز لەلایەن {config.MUSIC_BOT_NAME}__"""
             key = InlineKeyboardMarkup(
                 [
                     [
