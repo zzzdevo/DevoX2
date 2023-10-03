@@ -50,7 +50,7 @@ async def start_comm(client, message: Message, _):
             keyboard = help_pannel(_)
             return await message.reply_photo(
               photo=config.START_IMG_URL,
-                _["help_1"], reply_markup=keyboard
+              caption=_["help_1"], reply_markup=keyboard
             )
         if name[0:4] == "song":
             return await message.reply_text(_["song_2"])
@@ -232,8 +232,8 @@ async def start_comm(client, message: Message, _):
 async def testbot(client, message: Message, _):
     out = start_pannel(_)
     return await message.reply_photo(
-      photo=config.START_IMG_URL,
-        _["start_1"].format(
+       photo=config.START_IMG_URL,
+       caption=_["start_1"].format(
             message.chat.title, config.MUSIC_BOT_NAME
         ),
         reply_markup=InlineKeyboardMarkup(out),
