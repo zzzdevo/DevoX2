@@ -72,19 +72,14 @@ HELP_3 = """<b>
 HELP_4 = """<b>
 فەرمانی دەستپێکردن و زیادە: 
 ••┉┉┉┉┉┉••🝢••┉┉┉┉┉┉••
-
-⎙ /start : بۆ دەستپێکردنی بۆتی گۆرانی♥•
-⎙ /help : بۆ پیشاندانی فەرمانی بۆت♥•
 ⎙ /ping : بۆ پیشاندانی پینگ و ئاماری سیستەم♥•
 ⎙ /settings : ڕێکخستنە تەواوەکانی گرووپ بەدەست بهێنە بە دووگمە♥•
-
 هەڵبژاردنەکان لە ڕێکخستنەکان:
 ➊╎ دەتوانیت کوالێتی دەنگ بگۆڕیت بۆ ئەو جۆرەی کە دەتەوێت لە تێلی گرووپ پەخشی بکا
 ➋╎ دەتوانیت کوالێتی ڤیدیۆ بگۆڕیت بۆ ئەو جۆرەی کە دەتەوێت لە تێلی گرووپ پەخشی بکا
 ➌╎ بەکارهێنەری ڕێپێدراو: دەتوانیت لێرەوە دۆخی فەرمانەکانی ئەدمین بگۆڕیت بۆ هەموو کەسێک یان تەنها ئەدمینەکان ئەگەر هەمووان بێت، هەرکەسێک ئامادەبێت لە گرووپەکەتدا دەتوانێت فەرمانەکانی ئەدمین بەکاربهێنێت(وەک /skip، /stop و هتد)
 ➍╎ دۆخی پاککردنەوە: کاتێک چالاک دەکرێت نامەکانی بۆتەکە دەسڕێتەوە دوای 5 خولەك لە گروپەکەت بۆ ئەوەی دڵنیا بیت کە گرووپەکەت بە پاکی و باشی دەمێنێتەوە
 ➎╎ فەرمانی پاککردنەوە: لە کاتی چالاککردنی بۆتەکە یەکسەر فەرمانە جێبەجێکراوەکانی (/play, /pause, /shuffle, /stop etc) دەسڕێتەوە.
-
 ڕێکخستنەکانی پەخشکردن:
 ⎙ /playmode : بەشێکی تەواو بۆ ڕێکخستنی دۆخی پەخشکردن لە ڕێگایی دووگمەوە
 هەڵبژاردەکانی دۆخی پەخشکردن:
@@ -104,11 +99,6 @@ HELP_5 = """🔰**<u>ADD & REMOVE SUDO USERS :</u>**
 /get_log [Number of Lines] - Get log of your bot from heroku or vps. Works for both.
 /autoend [enable|disable] - Enable Auto stream end after 3 mins if no one is listening.
 
-📈**<u>STATS COMMANDS:</u>**
-/activevoice - Check active voice chats on bot.
-/activevideo - Check active video calls on bot.
-/stats - Check Bots Stats
-
 👤**<u>BLOCKED FUNCTION:</u>**
 /block [Username or Reply to a user] - Prevents a user from using bot commands.
 /unblock [Username or Reply to a user] - Remove a user from Bot's Blocked List.
@@ -118,14 +108,4 @@ HELP_5 = """🔰**<u>ADD & REMOVE SUDO USERS :</u>**
 /gban [Username or Reply to a user] - Gban a user from bot's served chat and stop him from using your bot.
 /ungban [Username or Reply to a user] - Remove a user from Bot's gbanned List and allow him for using your bot
 /gbannedusers - Check Gbanned Users Lists
-
-🎥**<u>VIDEOCALLS FUNCTION:</u>**
-/set_video_limit [Number of Chats] - Set a maximum Number of Chats allowed for Video Calls at a time. Default to 3 chats.
-/videomode [download|m3u8] - If download mode is enabled, Bot will download videos instead of playing them in M3u8 form. ByDefault to M3u8. You can use download mode when any query doesnt plays in m3u8 mode.
-
-⚡️**<u>PRIVATE BOT FUNCTION:</u>**
-/authorize [CHAT_ID] - Allow a chat for using your bot.
-/unauthorize [CHAT_ID] - Disallow a chat from using your bot.
-/authorized - Check all allowed chats of your bot.
-
 """
