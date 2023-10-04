@@ -1,11 +1,4 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
+
 
 import asyncio
 from datetime import datetime, timedelta
@@ -40,8 +33,8 @@ from YukkiMusic.utils.database import (add_active_chat,
                                        remove_active_video_chat,
                                        set_loop)
 from YukkiMusic.utils.exceptions import AssistantErr
-from YukkiMusic.utils.inline.play import (stream_markup, telegram_markup)
-from YukkiMusic.utils.formatters import check_duration, seconds_to_min, speed_converter
+from YukkiMusic.utils.inline.play import (stream_markup,
+                                          telegram_markup)
 from YukkiMusic.utils.stream.autoclear import auto_clean
 from YukkiMusic.utils.thumbnails import gen_thumb
 
@@ -127,76 +120,6 @@ class Call(PyTgCalls):
             await assistant.leave_group_call(chat_id)
         except:
             pass
-
-
-   async def speedup_stream(self, chat_id: int, file_path, speed, playing):
-        assistant = await group_assistant(self, chat_id)
-        if str(speed) != str("1.0"):
-            base = os.path.basename(file_path)
-            chatdir = os.path.join(os.getcwd(), "playback", str(speed))
-            if not os.path.isdir(chatdir):
-                os.makedirs(chatdir)
-            out = os.path.join(chatdir, base)
-            if not os.path.isfile(out):
-                if str(speed) == str("0.5"):
-                    vs = 2.0
-                if str(speed) == str("0.75"):
-                    vs = 1.35
-                if str(speed) == str("1.5"):
-                    vs = 0.68
-                if str(speed) == str("2.0"):
-                    vs = 0.5
-                proc = await asyncio.create_subprocess_shell(
-                    cmd=(
-                        "ffmpeg "
-                        "-i "
-                        f"{file_path} "
-                        "-filter:v "
-                        f"setpts={vs}*PTS "
-                        "-filter:a "
-                        f"atempo={speed} "
-                        f"{out}"
-                    ),
-                    stdin=asyncio.subprocess.PIPE,
-                    stderr=asyncio.subprocess.PIPE,
-                )
-                await proc.communicate()
-            else:
-                pass
-        else:
-            out = file_path
-        dur = await asyncio.get_event_loop().run_in_executor(None, check_duration, out)
-        dur = int(dur)
-        played, con_seconds = speed_converter(playing[0]["played"], speed)
-        duration = seconds_to_min(dur)
-        stream = (
-            AudioVideoPiped(
-                out,
-                audio_parameters=HighQualityAudio(),
-                video_parameters=MediumQualityVideo(),
-                additional_ffmpeg_parameters=f"-ss {played} -to {duration}",
-            )
-            if playing[0]["streamtype"] == "video"
-            else AudioPiped(
-                out,
-                audio_parameters=HighQualityAudio(),
-                additional_ffmpeg_parameters=f"-ss {played} -to {duration}",
-            )
-        )
-        if str(db[chat_id][0]["file"]) == str(file_path):
-            await assistant.change_stream(chat_id, stream)
-        else:
-            raise AssistantErr("Umm")
-        if str(db[chat_id][0]["file"]) == str(file_path):
-            exis = (playing[0]).get("old_dur")
-            if not exis:
-                db[chat_id][0]["old_dur"] = db[chat_id][0]["dur"]
-                db[chat_id][0]["old_second"] = db[chat_id][0]["seconds"]
-            db[chat_id][0]["played"] = con_seconds
-            db[chat_id][0]["dur"] = duration
-            db[chat_id][0]["seconds"] = dur
-            db[chat_id][0]["speed_path"] = out
-            db[chat_id][0]["speed"] = speed
 
     async def force_stop_stream(self, chat_id: int):
         assistant = await group_assistant(self, chat_id)
