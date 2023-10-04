@@ -6,18 +6,18 @@ HELP_1 = """<b>فەرمانی ئەدمین:\n••┉┉┉┉┉┉••🝢�
 ⎙ /mute : بۆ بێدەنگ کردنی گۆرانی♥•\n
 ⎙ /unmute : بۆ لادانی بێدەنگی گۆرانی♥•\n
 ⎙ /shuffle : بۆ تێکەڵکردنی گۆرانی ناو ڕیزکراوەکە♥•\n
-⎙ /seek [ماوە بە چرکە] : بۆ گەڕان بۆ پەخش و پێدانی ماوەکەی🖤•\n
-⎙ /seekback [ماوە بە چرکە] : بۆ گەڕاندنەوەی گەڕان بۆ پەخش و پێدانی ماوەکەی🖤•\n
-⎙ /loop [چالاک/ناچالاک] : چالاک/ناچالاک کردنی فەرمانی لووپ♥•\n
-⎙ /loop [1, 2, 3, ...] : چالاکردنی بە ژمارەی جیاواز♥•/n
+⎙ /seek ماوە بە چرکە : بۆ گەڕان بۆ پەخش و پێدانی ماوەکەی🖤•\n
+⎙ /seekback ماوە بە چرکە : بۆ گەڕاندنەوەی گەڕان بۆ پەخش و پێدانی ماوەکەی🖤•\n
+⎙ /loop چالاک/ناچالاک : چالاک/ناچالاک کردنی فەرمانی لووپ♥•\n
+⎙ /loop 1, 2, 3, ... : چالاکردنی بە ژمارەی جیاواز♥•/n
 
 ᯓ فەرمانی ڕێپێدان:
 ••┉┉┉┉┉┉••🝢••┉┉┉┉┉┉••
 
 بەکاردێت بۆ کەسانێ کە ئەدمین نین بەڵام دەتوانن فەرمانی ئەدمین لە بۆت بەکاربێنن
 
-⎙ /auth + [یوزەر] : بۆ زیادکردنی بەکارهێنەری ڕێگەپێدراو بەکارهێنانی فەرمانی بۆت وەك ئەدمین♥•\n
-⎙ /unauth + [یوزەر] : بۆ سڕینەوەی بەکارهێنەری ڕێگەپێدراو لە لیستی ڕێپێدان♥•\n
+⎙ /auth + یوزەر : بۆ زیادکردنی بەکارهێنەری ڕێگەپێدراو بەکارهێنانی فەرمانی بۆت وەك ئەدمین♥•\n
+⎙ /unauth + یوزەر : بۆ سڕینەوەی بەکارهێنەری ڕێگەپێدراو لە لیستی ڕێپێدان♥•\n
 ⎙ /authusers : بۆ پیشاندانی لیستی ڕێپێدان♥•</b>"""
 
 
@@ -53,7 +53,7 @@ HELP_3 = """<b>
 
 ⎙ /sudolist : پیشاندانی گەشەپێدەرانی بۆت♥•
 
-⎙ /song [ناوی گۆرانی یان لینکی] : بۆ داگرتنی گۆرانی لە یوتوب بە باشترین کوالێتی🖤•
+⎙ /song ناوی گۆرانی یان لینکی : بۆ داگرتنی گۆرانی لە یوتوب بە باشترین کوالێتی🖤•
 
 ⎙ /player : بەدەست هێنانی پانێڵی پەخشکەر♥•
 
@@ -80,40 +80,22 @@ HELP_4 = """<b>
 ⎙ /settings : ڕێکخستنە تەواوەکانی گرووپ بەدەست بهێنە بە دووگمە♥•
 
 هەڵبژاردنەکان لە ڕێکخستنەکان:
-
 ➊╎ دەتوانیت کوالێتی دەنگ بگۆڕیت بۆ ئەو جۆرەی کە دەتەوێت لە تێلی گرووپ پەخشی بکا
-
 ➋╎ دەتوانیت کوالێتی ڤیدیۆ بگۆڕیت بۆ ئەو جۆرەی کە دەتەوێت لە تێلی گرووپ پەخشی بکا
-
 ➌╎ بەکارهێنەری ڕێپێدراو: دەتوانیت لێرەوە دۆخی فەرمانەکانی ئەدمین بگۆڕیت بۆ هەموو کەسێک یان تەنها ئەدمینەکان ئەگەر هەمووان بێت، هەرکەسێک ئامادەبێت لە گرووپەکەتدا دەتوانێت فەرمانەکانی ئەدمین بەکاربهێنێت(وەک /skip، /stop و هتد)
-
 ➍╎ دۆخی پاککردنەوە: کاتێک چالاک دەکرێت نامەکانی بۆتەکە دەسڕێتەوە دوای 5 خولەك لە گروپەکەت بۆ ئەوەی دڵنیا بیت کە گرووپەکەت بە پاکی و باشی دەمێنێتەوە
-
 ➎╎ فەرمانی پاککردنەوە: لە کاتی چالاککردنی بۆتەکە یەکسەر فەرمانە جێبەجێکراوەکانی (/play, /pause, /shuffle, /stop etc) دەسڕێتەوە.
 
 ڕێکخستنەکانی پەخشکردن:
-
 ⎙ /playmode : بەشێکی تەواو بۆ ڕێکخستنی دۆخی پەخشکردن لە ڕێگایی دووگمەوە
 
 هەڵبژاردەکانی دۆخی پەخشکردن:
-
-➊╎ دۆخی گەڕان: دۆخی گەڕانەکەت دەگۆڕی بۆ دوو جۆر دووگمە و ڕاستەوخۆ
-
-➋╎ فەرمانی ئەدمین [هەموو کەسێك یان ئەدمینەکان]: ئەگەر هەموو کەسێك بێت، هەرکەسێک ئامادەبێت لە گرووپەکەتدا دەتوانێت فەرمانی ئەدمین بەکاربهێنێت (وەک /skip، /stop و هتد)
-
+➊╎ دۆخی گەڕان: دۆخی گەڕانەکەت دەگۆڕی بۆ دوو جۆر دووگمە و ڕاستەوخۆ\n
+➋╎ فەرمانی ئەدمین [هەموو کەسێك یان ئەدمینەکان]: ئەگەر هەموو کەسێك بێت، هەرکەسێک ئامادەبێت لە گرووپەکەتدا دەتوانێت فەرمانی ئەدمین بەکاربهێنێت (وەک /skip، /stop و هتد)\n
 ➌╎ جۆری پەخشکردن [هەموو کەسێك یان ئەدمینەکان]: ئەگەر ئەدمینەکان بن تەنیا ئەدمینەکانی گرووپ دەتوانن گۆرانی لە تێلی گرووپ لێبدەن</b>"""
-
 HELP_5 = """🔰**<u>ADD & REMOVE SUDO USERS :</u>**
 /addsudo [Username or Reply to a user]
 /delsudo [Username or Reply to a user]
-
-🛃**<u>HEROKU:</u>**
-/usage - Dyno Usage.
-
-🌐**<u>CONFIG VARS:</u>**
-/get_var - Get a config var from Heroku or .env.
-/del_var - Delete any var on Heroku or .env.
-/set_var [Var Name] [Value] - Set a Var or Update a Var on heroku or .env. Seperate Var and its Value with a space.
 
 🤖**<u>BOT COMMANDS:</u>**
 /reboot - Reboot your Bot. 
@@ -128,11 +110,6 @@ HELP_5 = """🔰**<u>ADD & REMOVE SUDO USERS :</u>**
 /activevoice - Check active voice chats on bot.
 /activevideo - Check active video calls on bot.
 /stats - Check Bots Stats
-
-⚠️**<u>BLACKLIST CHAT FUNCTION:</u>**
-/blacklistchat [CHAT_ID] - Blacklist any chat from using Music Bot
-/whitelistchat [CHAT_ID] - Whitelist any blacklisted chat from using Music Bot
-/blacklistedchat - Check all blacklisted chats.
 
 👤**<u>BLOCKED FUNCTION:</u>**
 /block [Username or Reply to a user] - Prevents a user from using bot commands.
@@ -152,17 +129,5 @@ HELP_5 = """🔰**<u>ADD & REMOVE SUDO USERS :</u>**
 /authorize [CHAT_ID] - Allow a chat for using your bot.
 /unauthorize [CHAT_ID] - Disallow a chat from using your bot.
 /authorized - Check all allowed chats of your bot.
-
-🌐**<u>BROADCAST FUNCTION:</u>**
-/broadcast [Message or Reply to a Message] - Broadcast any message to Bot's Served Chats.
-
-<u>options for broadcast:</u>
-**-pin** : This will pin your message 
-**-pinloud** : This will pin your message with loud notification
-**-user** : This will broadcast your message to the users who have started your bot.
-**-assistant** : This will broadcast your message from assistant account of your bot.
-**-nobot** : This will force your bot to not broadcast message
-
-**Example:** `/broadcast -user -assistant -pin Hello Testing`
 
 """
