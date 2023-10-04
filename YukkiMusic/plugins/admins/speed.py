@@ -31,7 +31,7 @@ async def playback(cli, message: Message, _, chat_id):
         return await message.reply_text(_["admin_35"])
     upl = speed_markup(_, chat_id)
     return await message.reply_text(
-        text=_["admin_36"].format(app.mention),
+        text=_["admin_36"],
         reply_markup=upl,
     )
 
