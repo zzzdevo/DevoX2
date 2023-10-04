@@ -7,7 +7,7 @@ from YukkiMusic.misc import SUDOERS, db
 from YukkiMusic.utils import AdminRightsCheck
 from YukkiMusic.utils.database import is_active_chat, is_nonadmin_chat
 from YukkiMusic.utils.decorators.language import languageCB
-from YukkiMusic.utils.inline import close_markup, speed_markup
+from YukkiMusic.utils.inline.speed import close_markup, speed_markup
 from config import BANNED_USERS, adminlist
 
 checker = []
