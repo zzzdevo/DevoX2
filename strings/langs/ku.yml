@@ -70,6 +70,14 @@ admin_31 : "Bot is not able to seek due to high duration given. You need to seek
 admin_32 : "Please Wait... Seeking ongoing stream."
 admin_33 : "Successfully Seeked Stream to {0} Mins"
 admin_34 : "Failed to seek the current stream."
+admin_35 : "» ᴏɴʟʏ ʏᴏᴜᴛᴜʙᴇ sᴛʀᴇᴀᴍ's sᴘᴇᴇᴅ ᴄᴀɴ ʙᴇ ᴄᴏɴᴛʀᴏʟʟᴇᴅ ᴄᴜʀʀᴇɴᴛʟʏ."
+admin_36 : "<b><u>{0} sᴘᴇᴇᴅ ᴄᴏɴᴛʀᴏʟ ᴘᴀɴᴇʟ</b></u>\n\nᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ʙᴇʟᴏᴡ ᴛᴏ ᴄʜᴀɴɢᴇ ᴛʜᴇ sᴘᴇᴇᴅ ᴏғ ᴄᴜʀʀᴇɴᴛʟʏ ᴘʟᴀʏɪɴɢ sᴛʀᴇᴀᴍ ᴏɴ ᴠɪᴅᴇᴏᴄʜᴀᴛ."
+admin_37 : "» ʙᴏᴛ ɪs ᴀʟʀᴇᴀᴅʏ ᴘʟᴀʏɪɴɢ ᴏɴ ɴᴏʀᴍᴀʟ sᴘᴇᴇᴅ."
+admin_38 : "» ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ...\n\nsᴏᴍᴇᴏɴᴇ ᴇʟsᴇ ɪs ᴛʀʏɪɴɢ ᴛᴏ ᴄʜᴀɴɢᴇ ᴛʜᴇ sᴘᴇᴇᴅ ᴏғ ᴛʜᴇ sᴛʀᴇᴀᴍ."
+admin_39 : "ᴄʜᴀɴɢɪɴɢ sᴘᴇᴇᴅ..."
+admin_40 : "» ᴛʀʏɪɴɢ ᴛᴏ ᴄʜᴀɴɢᴇ ᴛʜᴇ sᴘᴇᴇᴅ ᴏғ ᴛʜᴇ ᴏɴɢᴏɪɴɢ sᴛʀᴇᴀᴍ...\n\n<b>ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {0}"
+admin_41 : "» ғᴀɪʟᴇᴅ ᴛᴏ ᴄʜᴀɴɢᴇ ᴛʜᴇ sᴘᴇᴇᴅ ᴏғ ᴛʜᴇ ᴏɴɢᴏɪɴɢ sᴛʀᴇᴀᴍ."
+admin_42 : "» ᴄʜᴀɴɢᴇᴅ ᴛʜᴇ sᴘᴇᴇᴅ ᴏғ ᴛʜᴇ ᴏɴɢᴏɪɴɢ sᴛʀᴇᴀᴍ ᴛᴏ {0}x\n\n<b>ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {1}"
 
 # Bot 
 
