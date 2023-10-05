@@ -1,12 +1,3 @@
-#
-# Copyright (C) 2021-2022 by UUOF0@Github, < https://github.com/UUOF0 >.
-#
-# This file is part of < https://github.com/UUOF0/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/UUOF0/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
-
 import sys
 
 from pyrogram import Client
@@ -22,50 +13,55 @@ assistantids = []
 class Userbot(Client):
     def __init__(self):
         self.one = Client(
+            "cl1",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
-            session_name=config.STRING1,
+            session_string=str(config.STRING1),
             no_updates=True,
         )
         self.two = Client(
+            "cl2",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
-            session_name=str(config.STRING2),
+            session_string=str(config.STRING2),
             no_updates=True,
         )
         self.three = Client(
+            "cl3",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
-            session_name=str(config.STRING3),
+            session_string=str(config.STRING3),
             no_updates=True,
         )
         self.four = Client(
+            "cl4",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
-            session_name=str(config.STRING4),
+            session_string=str(config.STRING4),
             no_updates=True,
         )
         self.five = Client(
+            "cl5",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
-            session_name=str(config.STRING5),
+            session_string=str(config.STRING5),
             no_updates=True,
         )
 
     async def start(self):
-        LOGGER(__name__).info(f"Starting Assistant Clients")
+        LOGGER(__name__).info(f"Gettings Assistants Info...")
         if config.STRING1:
             await self.one.start()
             try:
-                await self.five.join_chat("iqmuc")
-                await self.five.join_chat("mgimt")
-                await self.five.join_chat("xv7amo")
+                await self.five.join_chat("IQSUPP")
+                await self.five.join_chat("MGIMT")
             except:
                 pass
             assistants.append(1)
             get_me = await self.one.get_me()
             self.one.username = get_me.username
             self.one.id = get_me.id
+            self.one.mention = get_me.mention
             assistantids.append(get_me.id)
             if get_me.last_name:
                 self.one.name = (
@@ -76,27 +72,27 @@ class Userbot(Client):
             LOGGER(__name__).info(
                 f"Assistant Started as {self.one.name}"
             )
-        if config.STRING2:
-            await self.two.start()
             try:
-                await self.five.join_chat("iqmuc")
-                await self.five.join_chat("mgimt")
-                await self.five.join_chat("xv7amo")
-            except:
-                pass
-            assistants.append(2)
-            try:
-                await self.two.send_message(
-                    config.LOG_GROUP_ID, "Assistant Started"
+                await self.one.send_message(
+                    config.LOG_GROUP_ID, f"**» {config.MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ᴏɴᴇ sᴛᴀʀᴛᴇᴅ :**\n\n✨ ɪᴅ : `{self.one.id}`\n❄ ɴᴀᴍᴇ : {self.one.name}\n💫 ᴜsᴇʀɴᴀᴍᴇ : @{self.one.username}"
                 )
             except:
                 LOGGER(__name__).error(
-                    f"Assistant Account 2 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin! "
+                    f"فشل حساب المساعد 1 في الوصول إلى مجموعة السجل. تأكد من إضافة مساعدك إلى مجموعة السجل الخاصة بك وترقيته كمسؤول ! "
                 )
                 sys.exit()
+        if config.STRING2:
+            await self.two.start()
+            try:
+                await self.five.join_chat("IQSUPP")
+                await self.five.join_chat("MGIMT")
+            except:
+                pass
+            assistants.append(2)
             get_me = await self.two.get_me()
             self.two.username = get_me.username
             self.two.id = get_me.id
+            self.two.mention = get_me.mention
             assistantids.append(get_me.id)
             if get_me.last_name:
                 self.two.name = (
@@ -104,30 +100,30 @@ class Userbot(Client):
                 )
             else:
                 self.two.name = get_me.first_name
+            try:
+                await self.two.send_message(
+                    config.LOG_GROUP_ID, f"**» {config.MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ᴏɴᴇ sᴛᴀʀᴛᴇᴅ :**\n\n✨ ɪᴅ : `{self.one.id}`\n❄ ɴᴀᴍᴇ : {self.one.name}\n💫 ᴜsᴇʀɴᴀᴍᴇ : @{self.one.username}"
+                )
+            except:
+                LOGGER(__name__).error(
+                    f"فشل حساب المساعد 1 في الوصول إلى مجموعة السجل. تأكد من إضافة مساعدك إلى مجموعة السجل الخاصة بك وترقيته كمسؤول ! "
+                )
+                sys.exit()
             LOGGER(__name__).info(
                 f"Assistant Two Started as {self.two.name}"
             )
         if config.STRING3:
             await self.three.start()
             try:
-                await self.five.join_chat("iqmuc")
-                await self.five.join_chat("mgimt")
-                await self.five.join_chat("xv7amo")
+                await self.five.join_chat("IQSUPP")
+                await self.five.join_chat("MGIMT")
             except:
                 pass
             assistants.append(3)
-            try:
-                await self.three.send_message(
-                    config.LOG_GROUP_ID, "Assistant Started"
-                )
-            except:
-                LOGGER(__name__).error(
-                    f"Assistant Account 3 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin! "
-                )
-                sys.exit()
             get_me = await self.three.get_me()
             self.three.username = get_me.username
             self.three.id = get_me.id
+            self.three.mention = get_me.mention
             assistantids.append(get_me.id)
             if get_me.last_name:
                 self.three.name = (
@@ -135,30 +131,30 @@ class Userbot(Client):
                 )
             else:
                 self.three.name = get_me.first_name
+            try:
+                await self.three.send_message(
+                    config.LOG_GROUP_ID, f"**» {config.MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ᴏɴᴇ sᴛᴀʀᴛᴇᴅ :**\n\n✨ ɪᴅ : `{self.one.id}`\n❄ ɴᴀᴍᴇ : {self.one.name}\n💫 ᴜsᴇʀɴᴀᴍᴇ : @{self.one.username}"
+                )
+            except:
+                LOGGER(__name__).error(
+                    f"فشل حساب المساعد 1 في الوصول إلى مجموعة السجل. تأكد من إضافة مساعدك إلى مجموعة السجل الخاصة بك وترقيته كمسؤول ! "
+                )
+                sys.exit()
             LOGGER(__name__).info(
                 f"Assistant Three Started as {self.three.name}"
             )
         if config.STRING4:
             await self.four.start()
             try:
-                await self.five.join_chat("iqmuc")
-                await self.five.join_chat("mgimt")
-                await self.five.join_chat("xv7amo")
+               await self.five.join_chat("IQSUPP")
+               await self.five.join_chat("MGIMT")
             except:
                 pass
             assistants.append(4)
-            try:
-                await self.four.send_message(
-                    config.LOG_GROUP_ID, "Assistant Started"
-                )
-            except:
-                LOGGER(__name__).error(
-                    f"Assistant Account 4 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin! "
-                )
-                sys.exit()
             get_me = await self.four.get_me()
             self.four.username = get_me.username
             self.four.id = get_me.id
+            self.four.mention = get_me.mention
             assistantids.append(get_me.id)
             if get_me.last_name:
                 self.four.name = (
@@ -166,30 +162,30 @@ class Userbot(Client):
                 )
             else:
                 self.four.name = get_me.first_name
+            try:
+                await self.four.send_message(
+                    config.LOG_GROUP_ID, f"**» {config.MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ᴏɴᴇ sᴛᴀʀᴛᴇᴅ :**\n\n✨ ɪᴅ : `{self.one.id}`\n❄ ɴᴀᴍᴇ : {self.one.name}\n💫 ᴜsᴇʀɴᴀᴍᴇ : @{self.one.username}"
+                )
+            except:
+                LOGGER(__name__).error(
+                    f"فشل حساب المساعد 1 في الوصول إلى مجموعة السجل. تأكد من إضافة مساعدك إلى مجموعة السجل الخاصة بك وترقيته كمسؤول ! "
+                )
+                sys.exit()
             LOGGER(__name__).info(
                 f"Assistant Four Started as {self.four.name}"
             )
         if config.STRING5:
             await self.five.start()
             try:
-                await self.five.join_chat("iqmuc")
-                await self.five.join_chat("mgimt")
-                await self.five.join_chat("xv7amo")
+                await self.five.join_chat("IQSUPP")
+                await self.five.join_chat("MGIMT")
             except:
                 pass
             assistants.append(5)
-            try:
-                await self.five.send_message(
-                    config.LOG_GROUP_ID, "Assistant Started"
-                )
-            except:
-                LOGGER(__name__).error(
-                    f"Assistant Account 5 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin! "
-                )
-                sys.exit()
             get_me = await self.five.get_me()
             self.five.username = get_me.username
             self.five.id = get_me.id
+            self.five.mention = get_me.mention
             assistantids.append(get_me.id)
             if get_me.last_name:
                 self.five.name = (
@@ -197,6 +193,15 @@ class Userbot(Client):
                 )
             else:
                 self.five.name = get_me.first_name
+            try:
+                await self.five.send_message(
+                    config.LOG_GROUP_ID, f"**» {config.MUSIC_BOT_NAME} ᴀssɪsᴛᴀɴᴛ ᴏɴᴇ sᴛᴀʀᴛᴇᴅ :**\n\n✨ ɪᴅ : `{self.one.id}`\n❄ ɴᴀᴍᴇ : {self.one.name}\n💫 ᴜsᴇʀɴᴀᴍᴇ : @{self.one.username}"
+                )
+            except:
+                LOGGER(__name__).error(
+                    f"فشل حساب المساعد 1 في الوصول إلى مجموعة السجل. تأكد من إضافة مساعدك إلى مجموعة السجل الخاصة بك وترقيته كمسؤول ! "
+                )
+                sys.exit()
             LOGGER(__name__).info(
                 f"Assistant Five Started as {self.five.name}"
             )
