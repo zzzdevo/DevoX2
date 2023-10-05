@@ -3,6 +3,7 @@ aiohttp
 asyncio
 beautifulsoup4
 dnspython
+lyricsgenius
 ffmpeg-python
 gitpython
 hachoir
